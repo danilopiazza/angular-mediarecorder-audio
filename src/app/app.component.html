@@ -1,0 +1,11 @@
+<h1>MediaRecorder</h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a></p>
+<h2>Record</h2>
+<div>
+  <button [disabled]="recording" (click)="start()">Record</button>
+  <button [disabled]="!recording" (click)="stop()">Stop</button>
+</div>
+<h2>Play</h2>
+<div *ngIf="trustedAudioURL">
+  <audio controls [src]="trustedAudioURL"></audio>
+</div>
